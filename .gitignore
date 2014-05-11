@@ -1,0 +1,8 @@
+out/*
+framework2.jar.out/smali/android/location
+framework2.jar.out/smali/com/google
+framework2.jar.out/smali/com/qualcomm
+stockrom.zip
+.delete-zip-file-when-clean
+framework2.jar.out/smali/org/
+
