@@ -1,0 +1,20 @@
+*** ./smali/com/android/internal/view/menu/ActionMenuPresenter.smali	2014-05-12 03:14:19.437623966 +0800
+--- /home/xinxin520/patchrom/miuiv5/normandy/temp/new_smali/framework.jar.out/./smali/com/android/internal/view/menu/ActionMenuPresenter.smali	2014-05-12 03:12:37.921627936 +0800
+***************
+*** 15,21 ****
+          Lcom/android/internal/view/menu/ActionMenuPresenter$ActionButtonSubmenu;,
+          Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowPopup;,
+          Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;,
+!         Lcom/android/internal/view/menu/ActionMenuPresenter$SavedState;
+      }
+  .end annotation
+  
+--- 15,22 ----
+          Lcom/android/internal/view/menu/ActionMenuPresenter$ActionButtonSubmenu;,
+          Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowPopup;,
+          Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;,
+!         Lcom/android/internal/view/menu/ActionMenuPresenter$SavedState;,
+!         Lcom/android/internal/view/menu/ActionMenuPresenter$Injector;
+      }
+  .end annotation
+  

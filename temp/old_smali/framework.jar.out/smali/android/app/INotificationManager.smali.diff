@@ -1,0 +1,19 @@
+*** ./smali/android/app/INotificationManager.smali	2014-05-12 03:13:33.313625770 +0800
+--- /home/xinxin520/patchrom/miuiv5/normandy/temp/new_smali/framework.jar.out/./smali/android/app/INotificationManager.smali	2014-05-12 03:11:51.157629765 +0800
+***************
+*** 15,20 ****
+--- 15,28 ----
+  
+  
+  # virtual methods
++ .method public abstract areNotificationsEnabled(Ljava/lang/String;)Z
++     .annotation system Ldalvik/annotation/Throws;
++         value = {
++             Landroid/os/RemoteException;
++         }
++     .end annotation
++ .end method
++ 
+  .method public abstract areNotificationsEnabledForPackage(Ljava/lang/String;)Z
+      .annotation system Ldalvik/annotation/Throws;
+          value = {

@@ -1,0 +1,19 @@
+*** CDMAPhone.smali	2014-05-12 03:14:29.213623583 +0800
+--- CDMAPhone.smali	2014-05-12 03:12:47.733627552 +0800
+***************
+*** 101,107 ****
+  
+  .field mPostDialHandler:Landroid/os/Registrant;
+  
+! .field mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
+  
+  .field mRuimSmsInterfaceManager:Lcom/android/internal/telephony/cdma/RuimSmsInterfaceManager;
+  
+--- 101,107 ----
+  
+  .field mPostDialHandler:Landroid/os/Registrant;
+  
+! .field mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
+  
+  .field mRuimSmsInterfaceManager:Lcom/android/internal/telephony/cdma/RuimSmsInterfaceManager;
+  

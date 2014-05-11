@@ -1,0 +1,33 @@
+*** ./smali/android/app/ApplicationPackageManager$ResourceName.smali	2014-05-12 03:13:29.561625916 +0800
+--- /home/xinxin520/patchrom/miuiv5/normandy/temp/new_smali/framework.jar.out/./smali/android/app/ApplicationPackageManager$ResourceName.smali	2014-05-12 03:11:47.397629912 +0800
+***************
+*** 4,15 ****
+  
+  
+  # annotations
+  .annotation system Ldalvik/annotation/EnclosingClass;
+      value = Landroid/app/ApplicationPackageManager;
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x1a
+      name = "ResourceName"
+  .end annotation
+  
+--- 4,19 ----
+  
+  
+  # annotations
++ .annotation build Landroid/annotation/MiuiHook;
++     value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_ACCESS:Landroid/annotation/MiuiHook$MiuiHookType;
++ .end annotation
++ 
+  .annotation system Ldalvik/annotation/EnclosingClass;
+      value = Landroid/app/ApplicationPackageManager;
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+!     accessFlags = 0x18
+      name = "ResourceName"
+  .end annotation
+  

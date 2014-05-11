@@ -1,0 +1,19 @@
+*** ./smali/com/android/server/BackupManagerService$PerformFullRestoreTask.smali	2014-05-12 03:13:01.973626995 +0800
+--- /home/xinxin520/patchrom/miuiv5/normandy/temp/new_smali/services.jar.out/./smali/com/android/server/BackupManagerService$PerformFullRestoreTask.smali	2014-05-12 03:11:20.765630954 +0800
+***************
+*** 1460,1466 ****
+      move-result v7
+  
+      .local v7, didRead:I
+!     if-ltz v7, :cond_0
+  
+      move-object/from16 v0, p0
+  
+--- 1460,1466 ----
+      move-result v7
+  
+      .local v7, didRead:I
+!     if-ltz v7, :cond_2
+  
+      move-object/from16 v0, p0
+  

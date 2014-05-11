@@ -1,0 +1,20 @@
+*** GpsLocationProvider.smali	2014-05-12 03:13:01.501627014 +0800
+--- GpsLocationProvider.smali	2014-05-12 03:11:20.349630970 +0800
+***************
+*** 11,17 ****
+      value = {
+          Lcom/android/server/location/GpsLocationProvider$GpsLocationProviderThread;,
+          Lcom/android/server/location/GpsLocationProvider$ProviderHandler;,
+!         Lcom/android/server/location/GpsLocationProvider$Listener;
+      }
+  .end annotation
+  
+--- 11,18 ----
+      value = {
+          Lcom/android/server/location/GpsLocationProvider$GpsLocationProviderThread;,
+          Lcom/android/server/location/GpsLocationProvider$ProviderHandler;,
+!         Lcom/android/server/location/GpsLocationProvider$Listener;,
+!         Lcom/android/server/location/GpsLocationProvider$Injector;
+      }
+  .end annotation
+  

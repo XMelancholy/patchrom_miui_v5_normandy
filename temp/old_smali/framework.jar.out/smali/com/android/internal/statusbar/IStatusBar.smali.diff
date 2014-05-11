@@ -1,0 +1,19 @@
+*** ./smali/com/android/internal/statusbar/IStatusBar.smali	2014-05-12 03:14:25.221623739 +0800
+--- /home/xinxin520/patchrom/miuiv5/normandy/temp/new_smali/framework.jar.out/./smali/com/android/internal/statusbar/IStatusBar.smali	2014-05-12 03:12:43.633627713 +0800
+***************
+*** 103,108 ****
+--- 103,116 ----
+      .end annotation
+  .end method
+  
++ .method public abstract setStatus(ILjava/lang/String;Landroid/os/Bundle;)V
++     .annotation system Ldalvik/annotation/Throws;
++         value = {
++             Landroid/os/RemoteException;
++         }
++     .end annotation
++ .end method
++ 
+  .method public abstract setSystemUiVisibility(II)V
+      .annotation system Ldalvik/annotation/Throws;
+          value = {

@@ -1,0 +1,20 @@
+*** AssetManager.smali	2014-05-12 03:13:49.713625128 +0800
+--- AssetManager.smali	2014-05-12 03:12:08.313629094 +0800
+***************
+*** 94,99 ****
+  
+  .method public constructor <init>()V
+      .locals 2
+  
+      .prologue
+      const/4 v1, 0x1
+--- 94,102 ----
+  
+  .method public constructor <init>()V
+      .locals 2
++     .annotation build Landroid/annotation/MiuiHook;
++         value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
++     .end annotation
+  
+      .prologue
+      const/4 v1, 0x1

@@ -1,0 +1,13 @@
+*** ./smali/com/android/server/am/ProcessRecord.smali	2014-05-12 03:12:54.945627270 +0800
+--- /home/xinxin520/patchrom/miuiv5/normandy/temp/new_smali/services.jar.out/./smali/com/android/server/am/ProcessRecord.smali	2014-05-12 03:11:13.825631225 +0800
+***************
+*** 221,226 ****
+--- 221,228 ----
+  
+  .field shortStringName:Ljava/lang/String;
+  
++ .field startedViaBroadcast:Z
++ 
+  .field starting:Z
+  
+  .field stringName:Ljava/lang/String;

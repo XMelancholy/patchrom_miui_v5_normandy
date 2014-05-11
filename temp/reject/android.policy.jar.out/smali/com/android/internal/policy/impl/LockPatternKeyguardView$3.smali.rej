@@ -1,0 +1,21 @@
+*** LockPatternKeyguardView$3.smali	2014-05-12 03:12:51.485627406 +0800
+--- LockPatternKeyguardView$3.smali	2014-05-12 03:11:10.141631369 +0800
+***************
+*** 7,14 ****
+  
+  
+  # annotations
+! .annotation system Ldalvik/annotation/EnclosingClass;
+!     value = Lcom/android/internal/policy/impl/LockPatternKeyguardView;
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;
+--- 7,14 ----
+  
+  
+  # annotations
+! .annotation system Ldalvik/annotation/EnclosingMethod;
+!     value = Lcom/android/internal/policy/impl/LockPatternKeyguardView;->createKeyguardScreenCallback()Lcom/android/internal/policy/impl/KeyguardScreenCallback;
+  .end annotation
+  
+  .annotation system Ldalvik/annotation/InnerClass;

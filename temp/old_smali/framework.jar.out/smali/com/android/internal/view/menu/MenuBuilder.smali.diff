@@ -1,0 +1,59 @@
+*** ./smali/com/android/internal/view/menu/MenuBuilder.smali	2014-05-12 03:14:18.901623987 +0800
+--- /home/xinxin520/patchrom/miuiv5/normandy/temp/new_smali/framework.jar.out/./smali/com/android/internal/view/menu/MenuBuilder.smali	2014-05-12 03:12:37.401627956 +0800
+***************
+*** 2475,2480 ****
+--- 2475,2528 ----
+      return v0
+  .end method
+  
++ .method public miuiGetActionItems()Ljava/util/ArrayList;
++     .locals 1
++     .annotation build Landroid/annotation/MiuiHook;
++         value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
++     .end annotation
++ 
++     .annotation system Ldalvik/annotation/Signature;
++         value = {
++             "()",
++             "Ljava/util/ArrayList",
++             "<",
++             "Lcom/android/internal/view/menu/MenuItemImpl;",
++             ">;"
++         }
++     .end annotation
++ 
++     .prologue
++     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->getActionItems()Ljava/util/ArrayList;
++ 
++     move-result-object v0
++ 
++     return-object v0
++ .end method
++ 
++ .method public miuiGetVisibleItems()Ljava/util/ArrayList;
++     .locals 1
++     .annotation build Landroid/annotation/MiuiHook;
++         value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
++     .end annotation
++ 
++     .annotation system Ldalvik/annotation/Signature;
++         value = {
++             "()",
++             "Ljava/util/ArrayList",
++             "<",
++             "Lcom/android/internal/view/menu/MenuItemImpl;",
++             ">;"
++         }
++     .end annotation
++ 
++     .prologue
++     invoke-virtual {p0}, Lcom/android/internal/view/menu/MenuBuilder;->getVisibleItems()Ljava/util/ArrayList;
++ 
++     move-result-object v0
++ 
++     return-object v0
++ .end method
++ 
+  .method onItemActionRequestChanged(Lcom/android/internal/view/menu/MenuItemImpl;)V
+      .locals 1
+      .parameter "item"

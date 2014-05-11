@@ -1,0 +1,3 @@
+post-build=qcom/msm8625/msm8625:4.1.2/JZO54K/eng.dhacker29.20140415.012146:userdebug/test-keys
+post-timestamp=1397542928
+pre-device=msm8625
