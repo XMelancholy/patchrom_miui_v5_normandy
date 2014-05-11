@@ -12,7 +12,8 @@
         Lcom/android/server/ConnectivityService$MyHandler;,
         Lcom/android/server/ConnectivityService$FeatureUser;,
         Lcom/android/server/ConnectivityService$RouteAttributes;,
-        Lcom/android/server/ConnectivityService$RadioAttributes;
+        Lcom/android/server/ConnectivityService$RadioAttributes;,
+	Lcom/android/server/ConnectivityService$Injector;
     }
 .end annotation
 
@@ -455,6 +456,8 @@
     goto :goto_0
 
     :cond_0
+    
+    invoke-static/range {p1 .. p1}, Lcom/miui/server/FirewallService;->setupService(Landroid/content/Context;)V
     new-instance v13, Landroid/os/HandlerThread;
 
     const-string v2, "ConnectivityServiceThread"
@@ -13466,9 +13469,10 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
+    :try_start_8
+    invoke-static/range {v20 .. v20}, Lcom/android/server/ConnectivityService$Injector;->startUsingNetworkFeature(I)V
     if-ltz v13, :cond_a
 
-    :try_start_8
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mHandler:Landroid/os/Handler;

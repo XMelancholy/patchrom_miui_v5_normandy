@@ -14,7 +14,8 @@
         Lcom/android/server/location/GpsLocationProvider$GpsLocationProviderThread;,
         Lcom/android/server/location/GpsLocationProvider$ProviderHandler;,
         Lcom/android/server/location/GpsLocationProvider$Listener;,
-        Lcom/android/server/location/GpsLocationProvider$DownloadStates;
+        Lcom/android/server/location/GpsLocationProvider$DownloadStates;,
+        Lcom/android/server/location/GpsLocationProvider$Injector;
     }
 .end annotation
 

@@ -123,6 +123,7 @@
 
 .field private static final FIRST_DRM_FILE_TYPE:I = 0x33
 
+.field private static final FIRST_FFMPEG_AUDIO_FILE_TYPE:I = 0x3e9
 .field private static final FIRST_IMAGE_FILE_TYPE:I = 0x20
 
 .field private static final FIRST_MIDI_FILE_TYPE:I = 0x10
@@ -139,6 +140,7 @@
 
 .field private static final LAST_DRM_FILE_TYPE:I = 0x33
 
+.field private static final LAST_FFMPEG_AUDIO_FILE_TYPE:I = 0x3e9
 .field private static final LAST_IMAGE_FILE_TYPE:I = 0x25
 
 .field private static final LAST_MIDI_FILE_TYPE:I = 0x12

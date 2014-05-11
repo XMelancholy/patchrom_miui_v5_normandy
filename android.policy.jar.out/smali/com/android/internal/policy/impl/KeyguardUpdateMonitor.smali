@@ -95,6 +95,12 @@
     .end annotation
 .end field
 
+.field private mSkipSimStateChange:Z
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+.end field
+
 .field private mTelephonyPlmn:[Ljava/lang/CharSequence;
 
 .field private mTelephonySpn:[Ljava/lang/CharSequence;
@@ -814,6 +820,13 @@
     .parameter "simArgs"
 
     .prologue
+    iget-boolean v2, p0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->mSkipSimStateChange:Z
+
+    if-eqz v2, :cond_miui_0
+
+    return-void
+
+    :cond_miui_0
     iget-object v1, p1, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$SimArgs;->simState:Lcom/android/internal/telephony/IccCard$State;
 
     .local v1, state:Lcom/android/internal/telephony/IccCard$State;
@@ -1085,6 +1098,9 @@
 .method private static isPluggedIn(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$BatteryStatus;)Z
     .locals 3
     .parameter "status"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     const/4 v0, 0x1
@@ -1100,6 +1116,12 @@
     if-ne v1, v2, :cond_1
 
     :cond_0
+    invoke-static {}, Landroid/app/MiuiThemeHelper;->isScreenshotMode()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
     :goto_0
     return v0
 
@@ -1611,6 +1633,17 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method isSimPinSecure()Z
+    .locals 1
+
+    .prologue
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->isSimLocked()Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public registerInfoCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$InfoCallback;)V

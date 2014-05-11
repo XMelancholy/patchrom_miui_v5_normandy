@@ -6,7 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$6;
+        Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$6;,
+        Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$Injector;
     }
 .end annotation
 
@@ -1712,6 +1713,9 @@
 
 .method private pollStateDone()V
     .locals 39
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     new-instance v35, Ljava/lang/StringBuilder;
@@ -2678,7 +2682,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/telephony/gsm/GSMPhone;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-nez v25, :cond_19
+    invoke-static/range {v24 .. v24}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v34
+    if-eqz v35, :cond_19
 
     const-string v35, "operatorNumeric is null"
 
