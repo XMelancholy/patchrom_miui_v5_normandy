@@ -15,10 +15,16 @@ local-modified-apps :=
 local-miui-apps     := 
 
 # All apps need to be removed from original ZIP file
-local-remove-apps   :=
+local-remove-apps   := Superuser
 
 # DPI
 local-density := HDPI
+
+local-miui-removed-apps :=  Phone TelephonyProvider
+
+local-miui-modified-apps := 
+
+include phoneapps.mk
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
