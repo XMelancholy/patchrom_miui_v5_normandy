@@ -99,7 +99,7 @@
 
 .field protected mRuimCard:Lcom/android/internal/telephony/uicc/UiccCard;
 
-.field protected mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/IccPhoneBookInterfaceManager;
+.field protected mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
 .field protected mSST:Lcom/android/internal/telephony/cdma/CdmaServiceStateTracker;
 
