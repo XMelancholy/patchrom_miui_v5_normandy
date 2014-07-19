@@ -22,7 +22,7 @@ local-density := HDPI
 
 local-miui-removed-apps :=  Phone TelephonyProvider
 
-local-miui-modified-apps := 
+local-miui-modified-apps := Contacts
 
 include phoneapps.mk
 
@@ -40,3 +40,5 @@ include $(PORT_BUILD)/porting.mk
 
 # To define any local-target
 local-zip-misc:
+	    cp other/build.prop $(ZIP_DIR)/system/build.prop
+

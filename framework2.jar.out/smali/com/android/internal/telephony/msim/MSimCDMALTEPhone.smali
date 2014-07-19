@@ -881,11 +881,11 @@
     iput-object v2, p0, Lcom/android/internal/telephony/msim/MSimCDMALTEPhone;->mCdmaSSM:Lcom/android/internal/telephony/cdma/CdmaSubscriptionSourceManager;
 
     .line 118
-    new-instance v2, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
+    new-instance v2, Lcom/android/internal/telephony/cdma/MiuiRuimPhoneBookInterfaceManager;
 
-    invoke-direct {v2, p0}, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/cdma/CDMAPhone;)V
+    invoke-direct {v2, p0}, Lcom/android/internal/telephony/cdma/MiuiRuimPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/cdma/CDMAPhone;)V
 
-    iput-object v2, p0, Lcom/android/internal/telephony/msim/MSimCDMALTEPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
+    iput-object v2, p0, Lcom/android/internal/telephony/msim/MSimCDMALTEPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     .line 119
     new-instance v2, Lcom/android/internal/telephony/PhoneSubInfo;
@@ -1124,9 +1124,9 @@
     invoke-virtual {p0}, Lcom/android/internal/telephony/msim/MSimCDMALTEPhone;->unregisterForRuimRecordEvents()V
 
     .line 418
-    iget-object v2, p0, Lcom/android/internal/telephony/msim/MSimCDMALTEPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
+    iget-object v2, p0, Lcom/android/internal/telephony/msim/MSimCDMALTEPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
-    invoke-virtual {v2, v3}, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
+    invoke-virtual {v2, v3}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
 
     .line 420
     :cond_2
@@ -1184,7 +1184,7 @@
     invoke-virtual {p0}, Lcom/android/internal/telephony/msim/MSimCDMALTEPhone;->registerForRuimRecordEvents()V
 
     .line 430
-    iget-object v3, p0, Lcom/android/internal/telephony/msim/MSimCDMALTEPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
+    iget-object v3, p0, Lcom/android/internal/telephony/msim/MSimCDMALTEPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
 
     iget-object v2, p0, Lcom/android/internal/telephony/msim/MSimCDMALTEPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
 

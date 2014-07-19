@@ -2195,14 +2195,14 @@
     goto :goto_0
 .end method
 
-.method getActiveApn()Lcom/android/internal/telephony/ApnSetting;
+.method getActiveApn()Lcom/android/internal/telephony/DataProfile;
     .locals 1
     .annotation build Landroid/annotation/MiuiHook;
         value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
     .end annotation
 
     .prologue
-    iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->mActiveApn:Lcom/android/internal/telephony/ApnSetting;
+    iget-object v0, p0, Lcom/android/internal/telephony/cdma/CdmaDataConnectionTracker;->mActiveApn:Lcom/android/internal/telephony/DataProfile;
 
     return-object v0
 .end method

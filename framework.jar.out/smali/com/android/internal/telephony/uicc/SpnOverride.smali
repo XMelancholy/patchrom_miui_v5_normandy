@@ -24,7 +24,7 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 1
 
     .prologue
@@ -242,7 +242,7 @@
 
 
 # virtual methods
-.method containsCarrier(Ljava/lang/String;)Z
+.method public containsCarrier(Ljava/lang/String;)Z
     .locals 1
     .parameter "carrier"
 
@@ -256,7 +256,7 @@
     return v0
 .end method
 
-.method getSpn(Ljava/lang/String;)Ljava/lang/String;
+.method public getSpn(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
     .parameter "carrier"
 
